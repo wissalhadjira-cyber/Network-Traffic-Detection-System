@@ -1,0 +1,12 @@
+.venv/
+data/
+
+__pycache__/
+*.pyc
+.env
+
+*.csv
+*.pcap
+*.pcapng
+
+.vscode/
