@@ -1,37 +1,111 @@
-# Network Traffic Detection System
+# 🛡️ Network Traffic Detection System
 
-## 📌 Project Overview
+A Machine Learning based system for detecting malicious network traffic.
 
-This project is a machine learning-based system designed to detect malicious network traffic.
+---
 
-The system analyzes network traffic data and classifies network flows as either **BENIGN** or **malicious traffic**. It uses a Random Forest machine learning model and provides both CSV-based analysis and real-time traffic analysis.
+## 📌 About the Project
 
-## 🎯 Objectives
+This project uses a Random Forest Classifier to analyze network traffic and classify it as either **BENIGN** or a specific type of cyber attack.
 
-The main objectives of this project are:
+It provides:
+- CSV file analysis
+- Real-time packet capture
+- Interactive web dashboard
 
-- Detect malicious network traffic using Machine Learning.
-- Classify network flows into different traffic categories.
-- Analyze network traffic from CSV datasets.
-- Provide real-time network traffic monitoring.
-- Display detection results through an interactive dashboard.
+---
 
-## 🛠️ Technologies Used
+## 🛠️ Built With
 
 - Python
-- Pandas
-- NumPy
 - Scikit-learn
-- Joblib
+- Pandas & NumPy
 - Streamlit
 - Scapy
 - Plotly
 
-## 🤖 Machine Learning Model
+---
 
-The project uses a **Random Forest Classifier** for traffic classification.
+## 📁 Project Files
 
-The trained model is saved in:
+| File | Description |
+|------|-------------|
+| `Stream.py` | Web interface (Streamlit) |
+| `predict.py` | CSV batch analysis |
+| `main.py` | Model training script |
+| `requirements.txt` | Required libraries |
+| `random_forest_model.pkl` | Trained model |
+| `label_encoder.pkl` | Label encoder |
+| `scaler.pkl` | Feature scaler |
 
-```text
-random_forest_model.pkl
+---
+
+## 🚀 How to Run
+
+### Step 1 — Download the project
+
+Click the green **Code** button on GitHub and choose **Download ZIP**, then extract it.
+
+Or clone it with Git:
+
+```bash
+git clone https://github.com/wissalhadjira-cyber/Network-Traffic-Detection-System.git
+```
+
+### Step 2 — Open the project folder
+
+Open a terminal inside the project folder.
+
+### Step 3 — Install the required libraries
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 4 — Run the application
+
+```bash
+streamlit run Stream.py
+```
+
+The browser will open automatically at `http://localhost:8501`.
+
+---
+
+## 📊 How to Use
+
+Once the app is running:
+
+1. Choose a mode from the sidebar:
+   - **📂 CSV File** — upload a CSV file with network traffic data
+   - **⚡ Realtime Capture** — capture live packets (needs Administrator rights)
+
+2. Press the **Start** button.
+
+3. View the results: safe or attack detected.
+
+---
+
+## 📈 Model Performance
+
+| Metric | Value |
+|--------|-------|
+| Algorithm | Random Forest |
+| Accuracy | 97.37% |
+| Dataset | CIC-IDS-2017 |
+| Attack Classes | 15 |
+
+---
+
+## 📚 Dataset
+
+The training data comes from **CIC-IDS-2017** and is not included in this repository due to its size.
+
+Download it from: [UNB CIC](https://www.unb.ca/cic/datasets/ids-2017.html)
+
+---
+
+## 👩‍💻 Author
+
+**Hadjira Wissal**
+University of Batna 2 — Cyber Security
