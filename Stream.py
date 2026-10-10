@@ -722,4 +722,3 @@ elif mode == t["mode_realtime"]:
         except Exception as e:
             status.error(t["rt_error"].format(error=str(e)))
             st.info("💡 Try running PowerShell as Administrator")
-
